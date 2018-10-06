@@ -15,6 +15,10 @@ def main(args):
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument('--is_train', type=str, help='Training or loading.', default="train")   
+    parser.add_argument('--load_dir', type=str, help='Load model checkpoint.', default="D:/SVHN_dataset/train/ckpt/")
+    parser.add_argument('--raw_im_dir', type=str, help='Image to test.', default="D:/SVHN_dataset/test")
+    parser.add_argument('--save_im_dir', type=str, help='Save sample images dir.', default="D:/SVHN_dataset/test_save/")
+
     parser.add_argument('--im_size', type=int, help='Image size (height, width) in pixels.', default=64)
     parser.add_argument('--batch', type=int, help='batch size.', default=64)
     parser.add_argument('--epoch', type=int, help='Number of training cyclese.', default=100)
